@@ -1,6 +1,6 @@
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
+require 'bundler/gem_tasks'
+require 'devtools'
 
-RSpec::Core::RakeTask.new(:spec)
+Devtools.init_rake_tasks
 
-task :default => :spec
+task :default => "spec:unit"
