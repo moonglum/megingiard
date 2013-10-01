@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/color_node'
 
 describe Megingiard::ColorNode do

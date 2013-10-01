@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/node'
 require 'megingiard/color_node'
 require 'megingiard/bold_node'

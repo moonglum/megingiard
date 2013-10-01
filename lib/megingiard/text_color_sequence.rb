@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/ansi_colors'
 require 'megingiard/ansi_escape_sequence'
 

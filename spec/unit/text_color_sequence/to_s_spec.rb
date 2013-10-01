@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/text_color_sequence'
 
 describe Megingiard::TextColorSequence do

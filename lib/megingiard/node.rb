@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Megingiard
   # A node with arbitrary many children
   class Node

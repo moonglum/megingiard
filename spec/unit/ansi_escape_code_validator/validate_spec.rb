@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/ansi_escape_code_validator'
 
 describe Megingiard::AnsiEscapeCodeValidator do

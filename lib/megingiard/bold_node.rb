@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/bold_sequence'
 require 'megingiard/reset_sequence'
 

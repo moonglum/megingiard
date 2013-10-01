@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/node'
 
 describe Megingiard::Node do

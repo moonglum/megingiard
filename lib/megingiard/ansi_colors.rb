@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Megingiard
   # The given ANSI escape sequence was not valid
   class InvalidAnsiColorCode < ArgumentError

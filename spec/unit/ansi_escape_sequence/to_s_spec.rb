@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/ansi_escape_sequence'
 
 describe Megingiard::AnsiEscapeSequence do

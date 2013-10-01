@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/bold_node'
 
 describe Megingiard::BoldNode do
