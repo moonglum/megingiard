@@ -7,7 +7,7 @@ module Megingiard
   # ANSI Escape Sequence for a Text Color
   class TextColorSequence
     def initialize(name)
-      color_code = AnsiColors.new.fetch(name)
+      color_code = ANSI_COLORS.fetch(name)
       @escape_sequence = AnsiEscapeSequence.new(color_code + 30)
     end
 
