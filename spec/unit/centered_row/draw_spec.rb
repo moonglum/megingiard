@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/centered_row'
 
 describe Megingiard::CenteredRow do

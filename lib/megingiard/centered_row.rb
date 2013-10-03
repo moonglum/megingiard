@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'megingiard/terminal_width'
 
 module Megingiard

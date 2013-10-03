@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Megingiard
   # Only reveal fetch and translates the Error Message
   class HashWrapper
