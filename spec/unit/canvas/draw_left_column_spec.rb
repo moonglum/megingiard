@@ -7,19 +7,15 @@ describe Megingiard::Canvas do
   let(:node_as_string) { double }
   let(:right_adjusted_text) { double }
   let(:output) { double }
-  let(:terminal_width) { double }
   let(:half_terminal_width) { double }
 
   before do
-    stub_const('Megingiard::TERMINAL_WIDTH', terminal_width)
+    stub_const('Megingiard::HALF_TERMINAL_WIDTH', half_terminal_width)
     allow(node).to receive(:to_s)
       .and_return(node_as_string)
     allow(node_as_string).to receive(:rjust)
       .and_return(right_adjusted_text)
     allow(output).to receive(:print)
-    allow(terminal_width).to receive(:/)
-      .with(2)
-      .and_return(half_terminal_width)
   end
 
   describe 'draw_left_column' do
