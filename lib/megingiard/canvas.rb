@@ -9,6 +9,11 @@ module Megingiard
       output.print right_adjusted_text
     end
 
+    # The right half of a full-width row
+    def draw_right_column(node)
+      output.puts node.to_s
+    end
+
     # A full-width row where the content is centered
     def draw_centered_row(node)
       centered_text = node.to_s.center(terminal_width)
