@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
-require 'megingiard/left_column'
+require 'megingiard/canvas'
 
-describe Megingiard::LeftColumn do
-  subject { Megingiard::LeftColumn.new(node, output, terminal_width) }
+describe Megingiard::Canvas do
+  subject { Megingiard::Canvas.new(node, output, terminal_width) }
   let(:node) { double }
   let(:node_as_string) { double }
   let(:right_adjusted_text) { double }
@@ -21,17 +21,17 @@ describe Megingiard::LeftColumn do
       .and_return(half_terminal_width)
   end
 
-  describe 'draw' do
+  describe 'draw_left_column' do
     it 'should to_s and right adjust the text' do
       expect(node_as_string).to receive(:rjust)
         .with(half_terminal_width)
-      subject.draw
+      subject.draw_left_column
     end
 
     it 'should put the resulting text to the output' do
       expect(output).to receive(:puts)
         .with(right_adjusted_text)
-      subject.draw
+      subject.draw_left_column
     end
   end
 end

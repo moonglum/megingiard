@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
-require 'megingiard/centered_row'
+require 'megingiard/canvas'
 
-describe Megingiard::CenteredRow do
-  subject { Megingiard::CenteredRow.new(node, output, terminal_width) }
+describe Megingiard::Canvas do
+  subject { Megingiard::Canvas.new(node, output, terminal_width) }
   let(:node) { double }
   let(:node_as_string) { double }
   let(:centered_text) { double }
@@ -17,17 +17,17 @@ describe Megingiard::CenteredRow do
     allow(output).to receive(:puts)
   end
 
-  describe 'draw' do
+  describe 'draw_centered_row' do
     it 'should to_s and center the text' do
       expect(node_as_string).to receive(:center)
         .with(terminal_width)
-      subject.draw
+      subject.draw_centered_row
     end
 
     it 'should put the resulting text to the output' do
       expect(output).to receive(:puts)
         .with(centered_text)
-      subject.draw
+      subject.draw_centered_row
     end
   end
 end
