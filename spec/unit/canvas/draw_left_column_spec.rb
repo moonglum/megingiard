@@ -2,7 +2,7 @@
 require 'megingiard/canvas'
 
 describe Megingiard::Canvas do
-  subject { Megingiard::Canvas.new(node, output, terminal_width) }
+  subject { Megingiard::Canvas.new(output, terminal_width) }
   let(:node) { double }
   let(:node_as_string) { double }
   let(:right_adjusted_text) { double }
@@ -25,13 +25,13 @@ describe Megingiard::Canvas do
     it 'should to_s and right adjust the text' do
       expect(node_as_string).to receive(:rjust)
         .with(half_terminal_width)
-      subject.draw_left_column
+      subject.draw_left_column(node)
     end
 
     it 'should put the resulting text to the output' do
       expect(output).to receive(:print)
         .with(right_adjusted_text)
-      subject.draw_left_column
+      subject.draw_left_column(node)
     end
   end
 end
