@@ -2,22 +2,27 @@
 
 module Megingiard
   # An area that can be drawn on
-  Canvas = Struct.new(:output, :terminal_width) do
+  class Canvas
+    def initialize(output, terminal_width)
+      @output = output
+      @terminal_width = terminal_width
+    end
+
     # The left half of a full-width row with right aligned content
     def draw_left_column(node)
-      right_adjusted_text = node.to_s.rjust(terminal_width / 2)
-      output.print right_adjusted_text
+      right_adjusted_text = node.to_s.rjust(@terminal_width / 2)
+      @output.print right_adjusted_text
     end
 
     # The right half of a full-width row
     def draw_right_column(node)
-      output.puts node.to_s
+      @output.puts node.to_s
     end
 
     # A full-width row where the content is centered
     def draw_centered_row(node)
-      centered_text = node.to_s.center(terminal_width)
-      output.puts centered_text
+      centered_text = node.to_s.center(@terminal_width)
+      @output.puts centered_text
     end
   end
 end
