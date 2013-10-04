@@ -15,7 +15,7 @@ describe Megingiard::Canvas do
       .and_return(node_as_string)
     allow(node_as_string).to receive(:rjust)
       .and_return(right_adjusted_text)
-    allow(output).to receive(:puts)
+    allow(output).to receive(:print)
     allow(terminal_width).to receive(:/)
       .with(2)
       .and_return(half_terminal_width)
@@ -29,7 +29,7 @@ describe Megingiard::Canvas do
     end
 
     it 'should put the resulting text to the output' do
-      expect(output).to receive(:puts)
+      expect(output).to receive(:print)
         .with(right_adjusted_text)
       subject.draw_left_column
     end
