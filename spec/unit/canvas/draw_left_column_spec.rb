@@ -2,7 +2,7 @@
 require 'megingiard/canvas'
 
 describe Megingiard::Canvas do
-  subject { Megingiard::Canvas.new(output, terminal_width) }
+  subject { Megingiard::Canvas.new(output) }
   let(:node) { double }
   let(:node_as_string) { double }
   let(:right_adjusted_text) { double }
@@ -11,6 +11,7 @@ describe Megingiard::Canvas do
   let(:half_terminal_width) { double }
 
   before do
+    stub_const('Megingiard::TERMINAL_WIDTH', terminal_width)
     allow(node).to receive(:to_s)
       .and_return(node_as_string)
     allow(node_as_string).to receive(:rjust)
