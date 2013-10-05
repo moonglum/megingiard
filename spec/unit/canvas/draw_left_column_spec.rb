@@ -25,7 +25,7 @@ describe Megingiard::Canvas do
       subject.draw_left_column(node)
     end
 
-    it 'should put the resulting text to the output' do
+    it 'should print the resulting text to the output' do
       expect(output).to receive(:print)
         .with(right_adjusted_text)
       subject.draw_left_column(node)
