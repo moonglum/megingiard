@@ -30,5 +30,11 @@ describe Megingiard::Canvas do
         .with(right_adjusted_text)
       subject.draw_left_column(node)
     end
+
+    it 'should know that it has drawn a left column' do
+      expect do
+        subject.draw_left_column(node)
+      end.to change { subject.left_column_drawn? }.to(true)
+    end
   end
 end

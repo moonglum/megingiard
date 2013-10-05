@@ -22,5 +22,13 @@ describe Megingiard::Canvas do
         .with(node_as_string)
       subject.draw_right_column(node)
     end
+
+    it 'should know that it has not drawn a left column' do
+      subject.instance_variable_set('@left_column_drawn', true)
+
+      expect do
+        subject.draw_right_column(node)
+      end.to change { subject.left_column_drawn? }.to(false)
+    end
   end
 end
