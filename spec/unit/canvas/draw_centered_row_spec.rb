@@ -15,6 +15,8 @@ describe Megingiard::Canvas do
       .and_return(node_as_string)
     allow(node_as_string).to receive(:center)
       .and_return(centered_text)
+    allow(centered_text).to receive(:to_s)
+      .and_return(centered_text)
     allow(output).to receive(:puts)
   end
 

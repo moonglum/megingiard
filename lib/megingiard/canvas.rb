@@ -23,14 +23,19 @@ module Megingiard
 
     # The right half of a full-width row
     def draw_right_column(node)
-      @output.puts node.to_s
-      @left_column_drawn = false
+      end_line_with(node)
     end
 
     # A full-width row where the content is centered
     def draw_centered_row(node)
       centered_text = node.to_s.center(TERMINAL_WIDTH)
-      @output.puts centered_text
+      end_line_with(centered_text)
+    end
+
+  private
+
+    def end_line_with(element)
+      @output.puts(element.to_s)
       @left_column_drawn = false
     end
   end
