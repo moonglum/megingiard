@@ -16,7 +16,7 @@ module Megingiard
 
     # The left half of a full-width row with right aligned content
     def draw_left_column(node)
-      right_adjusted_text = node.to_s.rjust(HALF_TERMINAL_WIDTH)
+      right_adjusted_text = node.to_s.rjust(CELL_WIDTH)
       @output.print right_adjusted_text
       @left_column_drawn = true
     end
