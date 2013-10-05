@@ -21,24 +21,30 @@ describe Megingiard::Canvas do
   end
 
   describe 'draw_centered_row' do
-    it 'should to_s and center the text' do
-      expect(node_as_string).to receive(:center)
-        .with(terminal_width)
-      subject.draw_centered_row(node)
-    end
+    context 'left column was not drawn' do
+      before { subject.instance_variable_set('@left_column_drawn', false) }
 
-    it 'should put the resulting text to the output' do
-      expect(output).to receive(:puts)
-        .with(centered_text)
-      subject.draw_centered_row(node)
-    end
-
-    it 'should know that it has not drawn a left column' do
-      subject.instance_variable_set('@left_column_drawn', true)
-
-      expect do
+      it 'should to_s and center the text' do
+        expect(node_as_string).to receive(:center)
+          .with(terminal_width)
         subject.draw_centered_row(node)
-      end.to change { subject.left_column_drawn? }.to(false)
+      end
+    end
+
+    context 'left column was drawn' do
+      before { subject.instance_variable_set('@left_column_drawn', true) }
+
+      it 'should know that it has not drawn a left column' do
+        expect do
+          subject.draw_centered_row(node)
+        end.to change { subject.left_column_drawn? }.to(false)
+      end
+
+      it 'should put the resulting text to the output' do
+        expect(output).to receive(:puts)
+          .with(centered_text)
+        subject.draw_centered_row(node)
+      end
     end
   end
 end
