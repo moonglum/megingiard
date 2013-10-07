@@ -5,4 +5,7 @@ module Megingiard
 
   # A Cell has half of the width of the terminal
   CELL_WIDTH = TERMINAL_WIDTH / 2
+
+  # A Cell filled with whitespace
+  EMPTY_CELL = ' ' * CELL_WIDTH
 end

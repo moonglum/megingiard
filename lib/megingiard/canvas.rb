@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 require 'megingiard/terminal_width'
+require 'megingiard/node'
 
 module Megingiard
   # An area that can be drawn on
@@ -23,6 +24,7 @@ module Megingiard
 
     # The right half of a full-width row
     def draw_right_column(node)
+      node = Node.new(EMPTY_CELL, node) unless left_column_drawn?
       end_line_with(node)
     end
 
