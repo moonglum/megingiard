@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
 require 'megingiard/terminal_width'
 require 'megingiard/node'
+require 'megingiard/centered_node'
 
 module Megingiard
   # An area that can be drawn on
@@ -30,8 +31,8 @@ module Megingiard
 
     # A full-width row where the content is centered
     def draw_centered_row(node)
-      centered_text = node.to_s.center(TERMINAL_WIDTH)
-      end_line_with(centered_text)
+      node = CenteredNode.new(TERMINAL_WIDTH, node)
+      end_line_with(node)
     end
 
   private
