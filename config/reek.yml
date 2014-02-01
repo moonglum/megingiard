@@ -10,7 +10,8 @@ ClassVariable:
   exclude: []
 ControlParameter:
   enabled: true
-  exclude: []
+  exclude:
+  - Megingiard::AnsiEscapeCodeValidator#validate
 DataClump:
   enabled: true
   exclude: []
