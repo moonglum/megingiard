@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
-require 'megingiard/canvas'
+require 'megingiard/centered_canvas'
 
-describe Megingiard::Canvas do
-  subject { Megingiard::Canvas.new(output) }
+describe Megingiard::CenteredCanvas do
+  subject { Megingiard::CenteredCanvas.new(output) }
   let(:node) { double }
   let(:node_as_string) { double }
   let(:right_adjusted_text) { double }

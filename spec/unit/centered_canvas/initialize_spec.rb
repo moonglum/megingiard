@@ -1,8 +1,8 @@
 # -*- encoding : utf-8 -*-
-require 'megingiard/canvas'
+require 'megingiard/centered_canvas'
 
-describe Megingiard::Canvas do
-  subject { Megingiard::Canvas.new(output) }
+describe Megingiard::CenteredCanvas do
+  subject { Megingiard::CenteredCanvas.new(output) }
   let(:output) { double }
 
   describe 'initialize' do

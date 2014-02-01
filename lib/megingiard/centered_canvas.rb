@@ -4,8 +4,8 @@ require 'megingiard/node'
 require 'megingiard/centered_node'
 
 module Megingiard
-  # An area that can be drawn on
-  class Canvas
+  # An area that can be drawn on, everything is centered
+  class CenteredCanvas
     def initialize(output)
       @output = output
       @left_column_drawn = false
