@@ -14,7 +14,7 @@ module Megingiard
 
     # Validate an ANSI escape sequence
     def validate(code)
-      raise InvalidAnsiEscapeCode unless VALID_ESCAPE_CODES.include?(code)
+      fail InvalidAnsiEscapeCode unless VALID_ESCAPE_CODES.include?(code)
     end
   end
 end

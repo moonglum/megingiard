@@ -2,7 +2,7 @@
 require 'megingiard/ansi_escape_sequence'
 
 describe Megingiard::AnsiEscapeSequence do
-  let(:code) { double('Integer', { to_s: code_as_string }) }
+  let(:code) { double('Integer', to_s: code_as_string) }
   let(:code_as_string) { '1' }
   let(:validator) { double }
 

@@ -3,7 +3,6 @@ require 'megingiard/ansi_colors'
 require 'megingiard/ansi_escape_sequence'
 
 module Megingiard
-
   # ANSI Escape Sequence for a Text Color
   class TextColorSequence
     def initialize(name)

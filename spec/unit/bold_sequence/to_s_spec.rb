@@ -3,7 +3,7 @@ require 'megingiard/bold_node'
 
 describe Megingiard::BoldNode do
   subject { Megingiard::BoldNode.new(child) }
-  let(:child) { double(String, { to_s: child_string }) }
+  let(:child) { double(String, to_s: child_string) }
   let(:child_string) { double }
   let(:reset_sequence_string) { double }
   let(:bold_sequence_string) { double }

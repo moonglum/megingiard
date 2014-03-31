@@ -3,7 +3,7 @@ require 'megingiard/text_color_sequence'
 
 describe Megingiard::TextColorSequence do
   subject { Megingiard::TextColorSequence.new(name) }
-  let(:color_code) { double(Integer, { :+ => ansi_code  }) }
+  let(:color_code) { double(Integer, :+ => ansi_code) }
   let(:name) { double }
   let(:ansi_code) { double }
   let(:ansi_escape_sequence) { double }

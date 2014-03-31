@@ -35,7 +35,7 @@ module Megingiard
       end_line_with(node)
     end
 
-  private
+    private
 
     def end_line_with(element)
       @output.puts(element.to_s)
