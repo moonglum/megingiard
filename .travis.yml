@@ -1,3 +1,5 @@
 language: ruby
+before_install:
+  - gem install bundler -v '1.6.0'
 rvm:
   - 2.0.0
