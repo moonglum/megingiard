@@ -5,6 +5,8 @@ Tools for creating beautiful CLI output.
 > Megingjörð is a belt worn by the god [Thor](https://en.wikipedia.org/wiki/Thor). According to the [Prose Edda](https://en.wikipedia.org/wiki/Prose_Edda), the belt is one of Thor's three main possessions, along with the hammer Mjölnir and the iron gloves Járngreipr. When worn, the belt is described as doubling Thor's already prodigious strength.
 – Wikipedia
 
+This is a work-in-progress library to create nice reporting output on the terminal. It will be used in exogenesis, but with later versions will hopefully be useful to other libraries as well. It is written with the help of [devtools](https://github.com/rom-rb/devtools) – this is mainly an experiment on which metrics I like for everyday development.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -18,10 +20,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install megingiard
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
