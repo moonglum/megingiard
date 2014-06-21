@@ -6,6 +6,8 @@ describe Megingiard::CenteredCanvas do
   let(:output) { double }
 
   describe 'initialize' do
-    its(:left_column_drawn?) { should be false }
+    it 'should know that the left column has been drawn' do
+      expect(subject.left_column_drawn?).to be false
+    end
   end
 end
