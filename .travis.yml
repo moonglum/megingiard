@@ -1,3 +1,7 @@
 language: ruby
 rvm:
   - 2.0.0
+script: "bundle exec rake ci"
+addons:
+  code_climate:
+    repo_token: 776c4013a8ea2314e34e3fc81500487385095bfb18ef4e6dc4222f0de45f7976

@@ -3,4 +3,4 @@ require 'devtools'
 
 Devtools.init_rake_tasks
 
-task :default => "spec:unit"
+task default: %w[ spec ci:metrics ]

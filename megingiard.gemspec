@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "utf8_emoji", "~> 0.1.0"
   spec.add_development_dependency "bundler", "~> 1.6.0"
+  spec.add_development_dependency "codeclimate-test-reporter", "~> 0.3.0"
 end
