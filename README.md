@@ -2,12 +2,12 @@
 
 | Project         | Ashikawa::Core
 |:----------------|:--------------------------------------------------
+| Homepage        | https://github.com/moonglum/megingiard
 | Documentation   | [RubyDoc](http://www.rubydoc.info/gems/megingiard)
 | CI              | [![Build Status](http://img.shields.io/travis/moonglum/megingiard.svg)](http://travis-ci.org/moonglum/megingiard)
-| Code Metrics    | [![Code Climate](http://img.shields.io/codeclimate/github/moonglum/megingiard.svg)](https://codeclimate.com/github/moonglum/megingiard)
+| Code Metrics    | [![Code Climate](http://img.shields.io/codeclimate/github/moonglum/megingiard.svg)](https://codeclimate.com/github/moonglum/megingiard) [![Code Climate Coverage](http://img.shields.io/codeclimate/coverage/github/moonglum/megingiard.svg)](https://codeclimate.com/github/moonglum/megingiard)
 | Gem Version     | [![Gem Version](http://img.shields.io/gem/v/megingiard.svg)](http://rubygems.org/gems/megingiard)
 | Dependencies    | [![Dependency Status](http://img.shields.io/gemnasium/moonglum/megingiard.svg)](https://gemnasium.com/moonglum/megingiard)
-
 
 > Megingjörð is a belt worn by the god [Thor](https://en.wikipedia.org/wiki/Thor). According to the [Prose Edda](https://en.wikipedia.org/wiki/Prose_Edda), the belt is one of Thor's three main possessions, along with the hammer Mjölnir and the iron gloves Járngreipr. When worn, the belt is described as doubling Thor's already prodigious strength.
 – Wikipedia
