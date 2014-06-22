@@ -1,6 +1,6 @@
 # Megingiard
 
-| Project         | Ashikawa::Core
+| Project         | Megingiard
 |:----------------|:--------------------------------------------------
 | Homepage        | https://github.com/moonglum/megingiard
 | Documentation   | [RubyDoc](http://www.rubydoc.info/gems/megingiard)
