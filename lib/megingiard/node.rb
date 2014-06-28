@@ -7,7 +7,17 @@ module Megingiard
     end
 
     def to_s
-      @children.map(&:to_s).reduce(:+)
+      sum_children_attribute(:to_s)
+    end
+
+    def length
+      sum_children_attribute(:length)
+    end
+
+    private
+
+    def sum_children_attribute(attribute)
+      @children.map(&attribute).reduce(:+)
     end
   end
 end
