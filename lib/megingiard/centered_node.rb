@@ -6,6 +6,10 @@ module Megingiard
       @text = text
     end
 
+    def length
+      @width
+    end
+
     def to_s
       @text.to_s.center(@width)
     end
