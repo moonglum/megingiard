@@ -2,6 +2,7 @@
 require 'megingiard/terminal_width'
 require 'megingiard/node'
 require 'megingiard/centered_node'
+require 'megingiard/border'
 
 module Megingiard
   # An area that can be drawn on, everything is centered
@@ -35,11 +36,25 @@ module Megingiard
       end_line_with(node)
     end
 
+    # Draw the upper bound of a border
+    def start_border(info = '')
+      draw_border(:top, info)
+    end
+
+    # Draw the lower bound of a border
+    def end_border(info = '')
+      draw_border(:bottom, info)
+    end
+
     private
 
     def end_line_with(element)
       @output.puts(element)
       @left_column_drawn = false
+    end
+
+    def draw_border(orientation, info)
+      end_line_with(Border.new(orientation, info))
     end
   end
 end
