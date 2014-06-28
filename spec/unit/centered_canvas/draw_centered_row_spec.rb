@@ -4,18 +4,16 @@ require 'megingiard/centered_canvas'
 describe Megingiard::CenteredCanvas do
   subject { Megingiard::CenteredCanvas.new(output) }
   let(:node) { double }
-  let(:node_as_string) { double }
   let(:centered_text) { double }
   let(:output) { double }
   let(:terminal_width) { double }
+  let(:centered_output) { double }
 
   before do
     stub_const('Megingiard::TERMINAL_WIDTH', terminal_width)
-    allow(node).to receive(:to_s)
-      .and_return(node_as_string)
-    allow(node_as_string).to receive(:center)
-      .and_return(centered_text)
-    allow(centered_text).to receive(:to_s)
+    allow(Megingiard::CenteredNode).to receive(:new)
+      .and_return(centered_output)
+    allow(centered_output).to receive(:to_s)
       .and_return(centered_text)
     allow(output).to receive(:puts)
   end
@@ -24,9 +22,9 @@ describe Megingiard::CenteredCanvas do
     context 'left column was not drawn' do
       before { subject.instance_variable_set('@left_column_drawn', false) }
 
-      it 'should to_s and center the text' do
-        expect(node_as_string).to receive(:center)
-          .with(terminal_width)
+      it 'should center the node' do
+        expect(Megingiard::CenteredNode).to receive(:new)
+          .with(terminal_width, node)
         subject.draw_centered_row(node)
       end
     end
