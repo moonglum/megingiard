@@ -13,5 +13,9 @@ module Megingiard
     def to_s
       "#{@color_sequence}#{@child}#{RESET_SEQUENCE}"
     end
+
+    def length
+      @child.length
+    end
   end
 end
