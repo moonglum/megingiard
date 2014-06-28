@@ -12,5 +12,9 @@ module Megingiard
     def to_s
       @emoji
     end
+
+    def length
+      1
+    end
   end
 end
