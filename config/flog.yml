@@ -1,4 +1,4 @@
 ---
-threshold: 4.5
+threshold: 5.6
 enabled_platforms:
 - 'mri-2.0.0'
