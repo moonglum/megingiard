@@ -38,7 +38,7 @@ module Megingiard
     private
 
     def end_line_with(element)
-      @output.puts(element.to_s)
+      @output.puts(element)
       @left_column_drawn = false
     end
   end

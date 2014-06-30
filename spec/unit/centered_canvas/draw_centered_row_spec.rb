@@ -4,7 +4,6 @@ require 'megingiard/centered_canvas'
 describe Megingiard::CenteredCanvas do
   subject { Megingiard::CenteredCanvas.new(output) }
   let(:node) { double }
-  let(:centered_text) { double }
   let(:output) { double }
   let(:terminal_width) { double }
   let(:centered_output) { double }
@@ -13,8 +12,6 @@ describe Megingiard::CenteredCanvas do
     stub_const('Megingiard::TERMINAL_WIDTH', terminal_width)
     allow(Megingiard::CenteredNode).to receive(:new)
       .and_return(centered_output)
-    allow(centered_output).to receive(:to_s)
-      .and_return(centered_text)
     allow(output).to receive(:puts)
   end
 
@@ -40,7 +37,7 @@ describe Megingiard::CenteredCanvas do
 
       it 'should put the resulting text to the output' do
         expect(output).to receive(:puts)
-          .with(centered_text)
+          .with(centered_output)
         subject.draw_centered_row(node)
       end
     end
